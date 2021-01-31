@@ -1,0 +1,9 @@
+#! /bin/bash
+
+var=`curl -s ipinfo.io/ip 2> a`
+if [ -n "$var" ]
+then echo My ip is `curl -s ipinfo.io/ip 2> a` and my ISP is `curl -s ipinfo.io/org 2> b`
+else echo You are not connected to the internet!
+fi
+rm a
+rm b
